@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string;
+  location: string;
+	date: string;
+	img: string;
+}
+
+const { title, location, date, img } = Astro.props;
+---
+
+<div class="border-2 border-cyan-400 self-stretch p-6 space-x-3 w-80 xl:w-96 text-center">
+  <img src={img} alt="previous hackathon event" class="aspect-square w-full">
+  <div class="text-white font-bold mt-3 space-x-2">
+    <p class="text-lg underline">{title}</p>
+    <p class="text-base">{date}, {location}</p>
+  </div>
+</div>
